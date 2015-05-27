@@ -1,13 +1,13 @@
 # 環境安裝說明
 
-[Mac安裝說明](#Mac安裝說明)
+[Mac安裝說明](#Mac)
 
-[Ubuntu安裝說明](#Ubuntu安裝說明)
+[Ubuntu安裝說明](#Ubuntu)
 
 ---
 
 
-## Mac安裝說明
+## Mac
 
 本說明為根據Os X 10.10.3完全乾淨的環境來設定Keanux的開發環境
 
@@ -79,15 +79,27 @@
 
 1. 打開**Keanux**資料夾下的server.js，修改以下部分的設定
 
-		var connection = mysql.createConnection({			host     : 'localhost',			port     : '3306',			user     : 'root',			password : '剛剛設定的密碼',			database : 'keanux'		});
-1. 還原需要的package
-		npm install1. 執行網站
-		node server.js
-1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
+		var connection = mysql.createConnection({
+			host     : 'localhost',
+			port     : '3306',
+			user     : 'root',
+			password : '剛剛設定的密碼',
+			database : 'keanux'
+		});
+
+1. 還原需要的package
+
+		npm install
+
+1. 執行網站
+
+		node server.js
+
+1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
 
 ---
 
-## Ubuntu安裝說明
+## Ubuntu
 
 本說明為根據ubuntu 14.04完全乾淨的環境來設定Keanux的開發環境
 
@@ -151,8 +163,20 @@
 
 1. 打開**Keanux**資料夾下的server.js，修改以下部分的設定
 
-		var connection = mysql.createConnection({			host     : 'localhost',			port     : '3306',			user     : 'root',			password : '剛剛設定的密碼',			database : 'keanux'		});
-1. 還原需要的package
-		npm install1. 執行網站
-		node server.js
-1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
+		var connection = mysql.createConnection({
+			host     : 'localhost',
+			port     : '3306',
+			user     : 'root',
+			password : '剛剛設定的密碼',
+			database : 'keanux'
+		});
+
+1. 還原需要的package
+
+		npm install
+
+1. 執行網站
+
+		node server.js
+
+1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
