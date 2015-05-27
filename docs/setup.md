@@ -77,7 +77,7 @@
 
 ### 修改設定並啟動網站
 
-1. 打開**Keanux**資料夾下的server.js，修改以下部分的設定
+1. 打開**Keanux**資料夾下的configs/config.js，修改以下部分的設定
 
 		var connection = mysql.createConnection({
 			host     : 'localhost',
@@ -161,7 +161,7 @@
 
 ### 修改設定並啟動網站
 
-1. 打開**Keanux**資料夾下的server.js，修改以下部分的設定
+1. 打開**Keanux**資料夾下的configs/config.js，修改以下部分的設定
 
 		var connection = mysql.createConnection({
 			host     : 'localhost',
