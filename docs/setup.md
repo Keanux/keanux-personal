@@ -1,8 +1,8 @@
 # 環境安裝說明
 
-[Mac安裝說明](#mac)
+[Mac安裝說明](#mac安裝說明)
 
-[Ubuntu安裝說明](#ubuntu)
+[Ubuntu安裝說明](#ubuntu安裝說明)
 
 ---
 
