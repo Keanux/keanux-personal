@@ -1,7 +1,7 @@
 // Application config
 module.exports = {
     host     : 'localhost',
-    port     : 8889,
+    port     : 3306,
     user     : 'USERNAME',
     password : 'PASSWORD',
     database : 'keanux'
