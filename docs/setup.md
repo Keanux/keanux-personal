@@ -1,13 +1,13 @@
 # 環境安裝說明
 
-[Mac安裝說明](#Mac)
+[Mac安裝說明](#mac)
 
-[Ubuntu安裝說明](#Ubuntu)
+[Ubuntu安裝說明](#ubuntu)
 
 ---
 
 
-## Mac
+## Mac安裝說明
 
 本說明為根據Os X 10.10.3完全乾淨的環境來設定Keanux的開發環境
 
@@ -99,7 +99,7 @@
 
 ---
 
-## Ubuntu
+## Ubuntu安裝說明
 
 本說明為根據ubuntu 14.04完全乾淨的環境來設定Keanux的開發環境
 
