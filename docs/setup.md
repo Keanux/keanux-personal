@@ -41,6 +41,7 @@
 
 		git clone https://github.com/Keanux/keanux-personal ~/Documents/keanux-personal
 		
+		
 ## 安裝及設定mysql
 
 1. 使用apt-get 安裝，過程中必須設定root帳號的密碼
@@ -61,5 +62,8 @@
 
 1. 打開**Keanux**資料夾下的server.js，修改以下部分的設定
 
-		var connection = mysql.createConnection({			host     : 'localhost',			port     : '3306',			user     : 'root',			password : '剛剛設定的密碼',			database : 'keanux'		});1. 執行網站
+		var connection = mysql.createConnection({			host     : 'localhost',			port     : '3306',			user     : 'root',			password : '剛剛設定的密碼',			database : 'keanux'		});
+1. 還原需要的package
+		npm install1. 執行網站
 		node server.js
+1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
