@@ -20,7 +20,7 @@ app.use(express.static('public'));
 var apiController = require('./controllers/api');
 app.use('/api', apiController)
    .use('/bundle.js', browserify.serve({
-       entry: __dirname + '/public/scripts/posts',
+       entry: __dirname + '/app/main',
        debug: true,
        watch: true,
        transforms: [reactify]
