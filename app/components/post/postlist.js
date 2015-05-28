@@ -5,10 +5,10 @@ var PostList = React.createClass({
         var postNodes = this.props.data.map(function (post, index) {
             return (
                 <Post unique_id={post.id}
-                    nickname={ post.User.name }
+                    nickname={ post.User.nickname }
                     title={post.title}
                     subtitle={post.subtitle}
-                    username={ post.User.nickname }
+                    username={ post.User.name }
                     createdAt={post.createdAt}
                     key={index}>
                     {post.content}
