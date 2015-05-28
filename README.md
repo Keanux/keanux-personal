@@ -7,6 +7,10 @@
 - [Hackpad](https://keanux.hackpad.com/INTRO-rDTHFqtALl2)
 - [Facebook Page](https://www.facebook.com/trykeanux)
 
+# 功能說明
+
+目前僅提供顯示範例頁面，編寫及其他功能的部分正在開發，有任何錯誤或功能上的想法都歡迎在[Issue](https://github.com/Keanux/keanux-personal/issues)留言。
+
 # 安裝說明
 
 參考[安裝說明](docs/setup.md)
