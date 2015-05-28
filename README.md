@@ -11,6 +11,10 @@
 
 目前僅提供顯示範例頁面，編寫及其他功能的部分正在開發，有任何錯誤或功能上的想法都歡迎在[Issue](https://github.com/Keanux/keanux-personal/issues)留言。
 
+# 環境安裝
+
+參考[安裝說明](docs/setup.md)或是[Keanux-Vagrant](https://github.com/Keanux/keanux-vagrant)
+
 # 快速開始
 
 1. 將專案clone 至本機
@@ -24,10 +28,6 @@
         node server.js
 
 1. 開啟瀏覽器輸入 http://localhost:8080
-
-# 環境安裝
-
-參考[安裝說明](docs/setup.md)或是[Keanux-Vagrant](https://github.com/Keanux/keanux-vagrant)
 
 # Copyright & License
 
