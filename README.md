@@ -23,7 +23,7 @@
         node data/seed.js
         node server.js
 
-1. 開啟瀏覽器 http://localhost:8080
+1. 開啟瀏覽器輸入 http://localhost:8080
 
 # Copyright & License
 
