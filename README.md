@@ -1,6 +1,6 @@
 # Keanux-Personal
 
-這是一個一起學習nodejs + reactjs的計畫，透過一起實作，製作個人的開源寫作平台。
+這是一個一起學習Node.js和React的計畫，透過一起實作，製作個人的開源寫作平台。
 
 - [Keanux-Personal Demo](http://keanux.com:8080)
 - [Keanux](http://keanux.com)
