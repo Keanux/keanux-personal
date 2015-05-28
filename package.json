@@ -1,5 +1,21 @@
 {
-  "name": "keanux",
+  "name": "keanux-personal",
+  "version": "0.0.3",
+  "description": "Just a writing platform.",
+  "author": "Keanux",
+  "homepage": "http://keanux.com",
+  "keywords": [
+    "keanux",
+    "blog",
+    "cms"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Keanux/keanux-personal.git"
+  },
+  "bugs": "https://github.com/Keanux/keanux-personal/issues",
+  "contributors": "https://github.com/Keanux/keanux-personal/graphs/contributors",
+  "license": "MIT",
   "main": "server.js",
   "dependencies": {
     "body-parser": "~1.0.1",
