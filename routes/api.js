@@ -2,9 +2,9 @@
 var express = require('express');
 
 // Models
-var User = require('../models/user');
-var Post = require('../models/post');
+var Models = require('../models');
 
+// Route
 var router = express.Router();
 
 // To make sure everything is working
@@ -14,24 +14,22 @@ router.get('/', function (req, res) {
 
 // To get all user data
 router.get('/users', function (req, res) {
-    User.get(function(err, users){
-        if (err) {
+    Models.User.findAll()
+        .then(function(users){
+            res.json(users);
+        }, function(err){
             throw err;
-        }
-
-        res.json(users);
-    });
+        })
 });
 
 // To get all posts
 router.get('/posts', function (req, res) {
-    Post.get(function(err, posts){
-        if (err) {
+    Models.Post.findAll({ include: [{ model: Models.User, required: true}]})
+        .then(function(posts){
+            res.json({ data: posts});
+        }, function(err){
             throw err;
-        }
-
-        res.json({ data: posts});
-    });
+        });
 });
 
 module.exports = router;

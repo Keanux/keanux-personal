@@ -5,10 +5,12 @@
     "body-parser": "~1.0.1",
     "connect-browserify": "^4.0.0",
     "express": "~4.0.0",
-    "mysql": "git://github.com/felixge/node-mysql",
+    "mysql": "git://github.com/felixge/node-mysql.git",
     "node-jsx": "^0.13.3",
     "react": "^0.13.3",
     "react-ago-component": "^0.6.1",
-    "reactify": "^1.1.1"
+    "reactify": "^1.1.1",
+    "sequelize": "^3.1.1",
+    "sqlite3": "^3.0.8"
   }
 }

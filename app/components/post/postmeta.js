@@ -2,7 +2,7 @@ var Ago = require('react-ago-component');
 
 var PostMeta = React.createClass({
     render: function() {
-        var then = new Date(this.props.create_time * 1000);
+        var then = new Date(this.props.createdAt);
         return (
             <div className="block-postMeta postMeta-previewHeader">
                 <div className="u-floatLeft">

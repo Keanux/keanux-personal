@@ -9,7 +9,7 @@ var Post = React.createClass({
         var icon = "https://graph.facebook.com/" + this.props.username + "/picture?width=120&height=120";
         return (
             <div className="post">
-                <PostMeta username={this.props.username} nickname={this.props.nickname} create_time={this.props.create_time} />
+                <PostMeta username={this.props.username} nickname={this.props.nickname} createdAt={this.props.createdAt} />
                 <h2 className="postTitle">
                     <a href={"http://keanux.com/p/" + this.props.unique_id}>{this.props.title}</a>
                 </h2>
