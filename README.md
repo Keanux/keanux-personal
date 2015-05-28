@@ -11,6 +11,20 @@
 
 參考[安裝說明](docs/setup.md)
 
+# 快速開始
+
+1. 將專案clone 至本機
+
+        git clone git@github.com:Keanux/keanux-personal.git
+
+1. 準備好node.js環境，打開Terminal進入專案資料夾，使用以下指令安裝並建立測試資料庫，然後啟動網站
+
+        npm install
+        node data/seed.js
+        node server.js
+
+1. 開啟瀏覽器 http://localhost:8080
+
 # Copyright & License
 
 Copyright (c) 2015 Keanux - Released under the [MIT license](LICENSE).

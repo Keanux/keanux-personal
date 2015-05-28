@@ -1,18 +1,17 @@
-// Database Related Library
-var mysql = require('mysql');
-var config = require('../configs/config.js');
-var connection = mysql.createConnection(config);
+module.exports = function (sequelize, DataTypes) {
+    var User = sequelize.define(
+        "User",
+        {
+            name: DataTypes.STRING,
+            nickname: DataTypes.STRING
+        },
+        {
+            classMethods: {
+                associate: function (models) {
+                    models.User.hasMany(models.Post);
+                }
+            }
+        });
 
-// Get All User Data From Database
-exports.get = function (callback) {
-    var sql = 'SELECT * ' +
-              'FROM keany_user';
-
-    connection.query(sql, function (err, rows, fields) {
-        if (err) {
-            return callback(err);
-        }
-
-        callback(null, rows);
-    });
+    return User;
 };

@@ -17,8 +17,8 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // Register Route and Bundle.js
-var apiController = require('./controllers/api');
-app.use('/api', apiController)
+var apiRoute = require('./routes/api');
+app.use('/api', apiRoute)
    .use('/bundle.js', browserify.serve({
        entry: __dirname + '/app/main',
        debug: true,

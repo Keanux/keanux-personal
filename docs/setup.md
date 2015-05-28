@@ -55,41 +55,19 @@
 
 		git clone https://github.com/Keanux/keanux-personal ~/Documents/keanux-personal
 
-### 安裝mysql
-
-1. 我們一樣使用Homebrew安裝mysql，請使用以下指令安裝
-
-		brew install mysql
-
-1. 安裝完成後，使用以下指令啟動mysql服務
-
-		mysql.server start
-
-1. 安裝完畢，使用以下指令登入mysql
-
-		mysql -u root
-
-1. 建立網站所需要的資料庫 **keanux**，並倒入預先準備好的資料
-
-		CREATE DATABASE keanux;
-		USE keanux;
-		SOURCE ~/Documents/keanux-personal/data/keany.sql;
-
 ### 修改設定並啟動網站
 
-1. 打開**Keanux**資料夾下的configs/config.js，修改以下部分的設定
+1. 打開Terminal，進入專案所在位置
 
-		var connection = mysql.createConnection({
-			host     : 'localhost',
-			port     : 3306,
-			user     : 'root',
-			password : '剛剛設定的密碼',
-			database : 'keanux'
-		});
+		cd ~/Documents/keanux-personal
 
 1. 還原需要的package
 
 		npm install
+
+1. 建立資料表並且塞入測試資料
+
+		node data/seed.js
 
 1. 執行網站
 
@@ -142,38 +120,19 @@
 
 		git clone https://github.com/Keanux/keanux-personal ~/Documents/keanux-personal
 
-
-### 安裝及設定mysql
-
-1. 使用apt-get 安裝，過程中必須設定root帳號的密碼
-
-		sudo apt-get install mysql-server
-
-1. 安裝完畢，使用剛剛設定的密碼登入mysql
-
-		mysql -u root -p
-
-1. 建立網站所需要的資料庫 **keanux**，並倒入預先準備好的資料
-
-		CREATE DATABASE keanux;
-		USE keanux;
-		SOURCE ~/Documents/keanux-personal/data/keany.sql;
-
 ### 修改設定並啟動網站
 
-1. 打開**Keanux**資料夾下的configs/config.js，修改以下部分的設定
+1. 打開Terminal，進入專案所在位置
 
-		var connection = mysql.createConnection({
-			host     : 'localhost',
-			port     : 3306,
-			user     : 'root',
-			password : '剛剛設定的密碼',
-			database : 'keanux'
-		});
+		cd ~/Documents/keanux-personal
 
 1. 還原需要的package
 
 		npm install
+
+1. 建立資料表並且塞入測試資料
+
+		node data/seed.js
 
 1. 執行網站
 
