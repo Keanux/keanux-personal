@@ -1,8 +1,13 @@
-var Converter = new Showdown.converter();
+// Required Library
+var React = require('react');
+var Showdown = require('showdown');
+var Converter = new Showdown.Converter();
 var Strip = require('../../utilities/strip');
 
+// Related Control
 var PostMeta = require('./postmeta');
 
+// Control
 var Post = React.createClass({
     render: function() {
         var rawMarkup = Converter.makeHtml(this.props.children.toString());
