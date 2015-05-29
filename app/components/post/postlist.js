@@ -1,5 +1,10 @@
+// Required Library
+var React = require('React');
+
+// Related Control
 var Post = require('./post');
 
+// Control
 var PostList = React.createClass({
     render: function () {
         var postNodes = this.props.data.map(function (post, index) {

@@ -1,5 +1,8 @@
+// Required Library
+var React = require('React');
 var Ago = require('react-ago-component');
 
+// Control
 var PostMeta = React.createClass({
     render: function() {
         var then = new Date(this.props.createdAt);

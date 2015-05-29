@@ -1,5 +1,11 @@
+// Required Library
+var React = require('react');
+var $ = require('jquery');
+
+// Related Control
 var PostList = require('./postlist');
 
+// Control
 var PostBox = React.createClass({
     componentDidMount: function() {
         $.ajax({
