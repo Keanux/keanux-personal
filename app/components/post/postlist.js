@@ -1,5 +1,5 @@
 // Required Library
-var React = require('React');
+var React = require('react');
 
 // Related Control
 var Post = require('./post');

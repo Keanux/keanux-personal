@@ -1,5 +1,5 @@
 // Required Library
-var React = require('React');
+var React = require('react');
 var Ago = require('react-ago-component');
 
 // Control
