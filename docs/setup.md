@@ -144,7 +144,7 @@
 
 ---
 
-## Windows 安裝說明
+## Windows安裝說明
 
 本說明為根據 Windows 8.1 的環境來設定Keanux的開發環境
 
