@@ -13,7 +13,7 @@
 
 # 環境安裝
 
-參考[安裝說明](docs/setup.md)或是[Keanux-Vagrant](https://github.com/Keanux/keanux-vagrant)
+參考[安裝說明](docs/setup.md)或是使用[Keanux-Vagrant](https://github.com/Keanux/keanux-vagrant)
 
 # 快速開始
 
