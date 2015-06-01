@@ -1,6 +1,6 @@
 # Keanux-Personal
 
-[![Join the chat at https://gitter.im/Keanux/keanux-personal](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Keanux/keanux-personal?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/Keanux/Keanux-Public](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Keanux/Keanux-Public?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 這是一個一起學習Node.js和React的計畫，透過一起實作，製作個人的開源寫作平台。
 
