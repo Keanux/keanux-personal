@@ -2,7 +2,7 @@
 var React = require('react');
 
 // Related Control
-var PostBox = require('./components/post/PostBox');
+var PostBox = require('./components/post/postbox');
 
 React.render(
     <PostBox url="/api/posts" />,
