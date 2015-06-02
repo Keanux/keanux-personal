@@ -25,7 +25,7 @@ var PostBox = React.createClass({
     render: function() {
         return (
             <div className="postBox">
-                <h1>Keanux</h1>
+                <h1>Keanux-Personal Demo</h1>
                 <PostList data={this.state.data} />
             </div>
         );
