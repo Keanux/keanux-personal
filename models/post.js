@@ -4,7 +4,8 @@ module.exports = function (sequelize, DataTypes) {
         {
             title: DataTypes.STRING,
             subtitle: DataTypes.STRING,
-            content: DataTypes.TEXT
+            content: DataTypes.TEXT,
+            unique_id: DataTypes.STRING
         },
         {
             classMethods: {
