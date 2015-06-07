@@ -1,5 +1,5 @@
 // Required Library
-var React = require('React');
+var React = require('react');
 
 // Related Control
 var Post = require('./post');
@@ -9,7 +9,7 @@ var PostList = React.createClass({
     render: function () {
         var postNodes = this.props.data.map(function (post, index) {
             return (
-                <Post unique_id={post.id}
+                <Post unique_id={post.unique_id}
                     nickname={ post.User.nickname }
                     title={post.title}
                     subtitle={post.subtitle}
@@ -27,6 +27,5 @@ var PostList = React.createClass({
         );
     }
 });
-
 
 module.exports = PostList;

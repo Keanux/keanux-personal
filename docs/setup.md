@@ -4,6 +4,8 @@
 
 [Ubuntu安裝說明](#ubuntu安裝說明)
 
+[Windows安裝說明](#windows安裝說明)
+
 ---
 
 
@@ -139,3 +141,58 @@
 		node server.js
 
 1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
+
+---
+
+## Windows安裝說明
+
+本說明為根據 Windows 8.1 的環境來設定Keanux的開發環境
+
+### 安裝 cmder
+
+1. 下載 [Cmder](http://gooseberrycreative.com/cmder/)
+1. 安裝 Cmder Termial
+
+### 安裝 node.js (nvm)
+
+1. [官方下載](https://nodejs.org/)
+
+1. 開啟 Terminal
+
+1. 確認 node.js 有安裝成功
+
+		node -v
+
+### 安裝 Git (版本控制系統)
+
+[官方下載](https://git-scm.com/download/win)
+
+### 下載 Keanux 程式
+
+1. 開啟 Cmder Terminal 至目標目錄 (ex C:\Documents\)
+
+		cd C:\Documents\
+
+1. 使用 git clone 到本機
+
+		git clone https://github.com/Keanux/keanux-personal
+
+### 修改設定並啟動網站
+
+1. 打開 Terminal，進入專案所在位置
+
+		cd keanux-personal
+
+1. 還原需要的 package
+
+		npm install
+
+1. 建立資料表並且塞入測試資料
+
+		node data\seed.js
+
+1. 執行網站
+
+		node server.js
+
+1. 打開 browser 到 http://localhost:8080，看到網站就代表成功囉！
