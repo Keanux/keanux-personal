@@ -2,9 +2,13 @@
 var React = require('react');
 
 // Related Control
-var PostBox = require('./components/post/postbox');
+var PostBox = require('./components/post/PostBox');
+var Nav = require('./components/nav/nav');
 
 React.render(
-    <PostBox url="/api/posts" />,
-    document.getElementById('content')
+    <div>
+        <Nav />
+        <PostBox url="/api/posts" />
+    </div>
+    , document.getElementById('content')
 );
