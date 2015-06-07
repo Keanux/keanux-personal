@@ -50,6 +50,13 @@ var Nav = React.createClass({
                                     </span>
                                 </a>
                             </li>
+                            <li className="nav-menu-item">
+                                <a title="Login" href="/auth/facebook">
+                                    <span className="nav-menu-title">
+                                        Facebook Login
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>

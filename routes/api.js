@@ -15,19 +15,19 @@ router.get('/', function (req, res) {
 // To get all user data
 router.get('/users', function (req, res) {
     Models.User.findAll()
-        .then(function(users){
+        .then(function (users) {
             res.json(users);
-        }, function(err){
+        }, function (err) {
             throw err;
         })
 });
 
 // To get all posts
 router.get('/posts', function (req, res) {
-    Models.Post.findAll({ include: [{ model: Models.User, required: true}]})
-        .then(function(posts){
-            res.json({ data: posts});
-        }, function(err){
+    Models.Post.findAll({include: [{model: Models.User, required: true}]})
+        .then(function (posts) {
+            res.json({data: posts});
+        }, function (err) {
             throw err;
         });
 });
