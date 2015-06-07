@@ -7,6 +7,7 @@ var browserify = require('connect-browserify');
 // Passport Library
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
+var Models = require('./models');
 
 var FACEBOOK_APP_ID = "FACEBOOK_APP_ID";
 var FACEBOOK_APP_SECRET = "FACEBOOK_APP_SECRET";
@@ -18,11 +19,11 @@ var FACEBOOK_APP_SECRET = "FACEBOOK_APP_SECRET";
 //   the user by ID when deserializing.  However, since this example does not
 //   have a database of user records, the complete Facebook profile is serialized
 //   and deserialized.
-passport.serializeUser(function(user, done) {
+passport.serializeUser(function (user, done) {
     done(null, user);
 });
 
-passport.deserializeUser(function(obj, done) {
+passport.deserializeUser(function (obj, done) {
     done(null, obj);
 });
 
@@ -35,14 +36,27 @@ passport.use(new FacebookStrategy({
         clientSecret: FACEBOOK_APP_SECRET,
         callbackURL: "http://localhost:8080/auth/facebook/callback"
     },
-    function(accessToken, refreshToken, profile, done) {
+    function (accessToken, refreshToken, profile, done) {
         // asynchronous verification, for effect...
         process.nextTick(function () {
-            // To keep the example simple, the user's Facebook profile is returned to
-            // represent the logged-in user.  In a typical application, you would want
-            // to associate the Facebook account with a user record in your database,
-            // and return that user instead.
-            return done(null, profile);
+            Models.User
+                .findOrCreate({
+                    where: {
+                        provider: 'Facebook',
+                        loginId: profile.id
+                    },
+                    defaults: {
+                        name: profile.name.familyName + profile.name.givenName,
+                        nickname: profile.displayName,
+                        provider: 'Facebook',
+                        loginId: profile.id
+                    }
+                })
+                .spread(function (user, created) {
+                    console.log(user, created);
+
+                    return done(null, user);
+                });
         });
     }
 ));
@@ -58,7 +72,7 @@ nodeJsx.install({extension: '.jsx'});
 var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(session({ secret: 'keyboard cat' }));
+app.use(session({secret: 'keyboard cat'}));
 // Initialize Passport!  Also use passport.session() middleware, to support
 // persistent login sessions (recommended).
 app.use(passport.initialize());
@@ -68,12 +82,12 @@ app.use(express.static('public'));
 // Register Route and Bundle.js
 var apiRoute = require('./routes/api');
 app.use('/api', apiRoute)
-   .use('/bundle.js', browserify.serve({
-       entry: __dirname + '/app/main',
-       debug: true,
-       watch: true,
-       transforms: [reactify]
-   }));
+    .use('/bundle.js', browserify.serve({
+        entry: __dirname + '/app/main',
+        debug: true,
+        watch: true,
+        transforms: [reactify]
+    }));
 
 // GET /auth/facebook
 //   Use passport.authenticate() as route middleware to authenticate the
@@ -82,7 +96,7 @@ app.use('/api', apiRoute)
 //   redirect the user back to this application at /auth/facebook/callback
 app.get('/auth/facebook',
     passport.authenticate('facebook'),
-    function(req, res){
+    function (req, res) {
         // The request will be redirected to Facebook for authentication, so this
         // function will not be called.
     });
@@ -93,8 +107,8 @@ app.get('/auth/facebook',
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
 app.get('/auth/facebook/callback',
-    passport.authenticate('facebook', { failureRedirect: '/login' }),
-    function(req, res) {
+    passport.authenticate('facebook', {failureRedirect: '/login'}),
+    function (req, res) {
         res.redirect('/');
     });
 

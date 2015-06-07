@@ -7,7 +7,9 @@ Models.sequelize.sync({force: true}).then(function () {
     // Add new User
     Models.User.create({
         name: 'keanyc',
-        nickname: 'KeaNy'
+        nickname: 'KeaNy',
+        provider: 'Facebook',
+        loginId: '10204525184038018'
     })
         .then(function (user) {
 
