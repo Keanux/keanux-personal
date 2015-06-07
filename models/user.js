@@ -5,7 +5,8 @@ module.exports = function (sequelize, DataTypes) {
             name: DataTypes.STRING,
             nickname: DataTypes.STRING,
             provider: DataTypes.ENUM('Local', 'Facebook'),
-            loginId: DataTypes.STRING
+            loginId: DataTypes.STRING,
+            photo: DataTypes.STRING
         },
         {
             classMethods: {

@@ -9,7 +9,8 @@ Models.sequelize.sync({force: true}).then(function () {
         name: 'keanyc',
         nickname: 'KeaNy',
         provider: 'Facebook',
-        loginId: '10204525184038018'
+        loginId: '10204525184038018',
+        photo: 'https://graph.facebook.com/keanyc/picture?width=120&height=120'
     })
         .then(function (user) {
 

@@ -4,8 +4,20 @@ var $ = require('jquery');
 var Nav = React.createClass({
         getInitialState: function () {
             return {
-                hideMenu: true
+                hideMenu: true,
+                isLogin: false,
+                user: null
             }
+        },
+        componentDidMount: function () {
+            var self = this;
+            $.get('/api/login/getStatus')
+                .then(function (result) {
+                    self.setState({
+                        isLogin: result.isLogin,
+                        user: result.user
+                    });
+                });
         },
         handleToggleMenu: function () {
             this.setState({
@@ -19,18 +31,18 @@ var Nav = React.createClass({
                 'hide': !this.state.hideMenu
             });
             var menuClass = cx({
-                'nav-menu' : true,
+                'nav-menu': true,
                 'hide': this.state.hideMenu
             });
 
             return (
                 <nav className="nav">
                     <div className={ logoClass }
-                        onClick={ this.handleToggleMenu }>
+                         onClick={ this.handleToggleMenu }>
                         <h1>K</h1>
                     </div>
                     <div className={ menuClass }
-                        onMouseLeave={ this.handleToggleMenu }>
+                         onMouseLeave={ this.handleToggleMenu }>
                         <ul className="nav-menu-list">
                             <li className="nav-menu-item">
                                 <a title="回首頁" href="/">
@@ -40,23 +52,25 @@ var Nav = React.createClass({
                                     </span>
                                 </a>
                             </li>
-                            <li className="nav-menu-item">
-                                <a title="到個人頁面" href="/@10204525184038018">
-                                    <i className="icon icons-avatar">
-                                        <img src="https://graph.facebook.com/keanyc/picture?width=120&height=120" />
-                                    </i>
+                            {this.state.isLogin ?
+                                <li className="nav-menu-item">
+                                    <a title="到個人頁面" href="#">
+                                        <i className="icon icons-avatar">
+                                            <img src={ this.state.user.photo }/>
+                                        </i>
                                     <span className="nav-menu-title">
-                                        Keany
+                                        { this.state.user.nickname }
                                     </span>
-                                </a>
-                            </li>
-                            <li className="nav-menu-item">
-                                <a title="Login" href="/auth/facebook">
+                                    </a>
+                                </li> :
+                                <li className="nav-menu-item">
+                                    <a title="Login" href="api/login/facebook">
                                     <span className="nav-menu-title">
                                         Facebook Login
                                     </span>
-                                </a>
-                            </li>
+                                    </a>
+                                </li>
+                            }
                         </ul>
                     </div>
                 </nav>
