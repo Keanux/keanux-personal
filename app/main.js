@@ -8,7 +8,7 @@ var Nav = require('./components/nav/nav');
 React.render(
     <div>
         <Nav />
-        <PostBox url="/api/posts" />
+        <PostBox />
     </div>
     , document.getElementById('content')
 );
