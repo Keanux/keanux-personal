@@ -1,3 +1,5 @@
+'use strict';
+
 // Required Library
 var React = require('react');
 var Showdown = require('showdown');

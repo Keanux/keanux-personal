@@ -1,3 +1,5 @@
+'use strict';
+
 // This file is only for generate testing data for website
 var Models = require('../models');
 

@@ -1,3 +1,5 @@
+'use strict';
+
 // Express Related Library
 var express = require('express');
 
@@ -5,8 +7,8 @@ var express = require('express');
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
-var FACEBOOK_APP_ID = "FACEBOOK_APP_ID";
-var FACEBOOK_APP_SECRET = "FACEBOOK_APP_SECRET";
+var FACEBOOK_APP_ID = 'FACEBOOK_APP_ID';
+var FACEBOOK_APP_SECRET = 'FACEBOOK_APP_SECRET';
 
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
@@ -30,7 +32,7 @@ passport.deserializeUser(function (obj, done) {
 passport.use(new FacebookStrategy({
         clientID: FACEBOOK_APP_ID,
         clientSecret: FACEBOOK_APP_SECRET,
-        callbackURL: "http://localhost:8080/api/login/facebook/callback",
+        callbackURL: 'http://localhost:8080/api/login/facebook/callback',
         profileFields: ['id', 'name', 'displayName', 'photos']
     },
     function (accessToken, refreshToken, profile, done) {
@@ -75,7 +77,7 @@ router.get('/users', function (req, res) {
             res.json(users);
         }, function (err) {
             throw err;
-        })
+        });
 });
 
 // To get all posts
@@ -116,7 +118,7 @@ router.get('/login/getStatus', function (req, res) {
     res.json({
         isLogin: req.isAuthenticated(),
         user: req.user
-    })
+    });
 });
 
 module.exports = router;

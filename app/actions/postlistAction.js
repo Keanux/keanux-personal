@@ -1,3 +1,5 @@
+'use strict';
+
 // Flux
 var Dispatcher = require('../dispatchers/appDispatcher');
 
