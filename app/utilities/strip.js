@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(html) {
     var tmp = document.createElement("DIV");
     tmp.innerHTML = html;

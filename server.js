@@ -1,3 +1,5 @@
+'use strict';
+
 // Express Related Library
 var express = require('express');
 var session = require('express-session');
@@ -9,7 +11,6 @@ var passport = require('passport');
 
 // React Related Library
 var reactify = require('reactify');
-var React = require('react');
 var nodeJsx = require('node-jsx');
 
 nodeJsx.install({extension: '.jsx'});
