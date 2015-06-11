@@ -17,6 +17,10 @@
   "contributors": "https://github.com/Keanux/keanux-personal/graphs/contributors",
   "license": "MIT",
   "main": "server.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node server.js"
+  },
   "dependencies": {
     "body-parser": "~1.0.1",
     "connect-browserify": "^4.0.0",
