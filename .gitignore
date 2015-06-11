@@ -7,3 +7,4 @@ public/npm-debug.log
 .idea/
 
 *.sqlite
+*.log
