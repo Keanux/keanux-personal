@@ -39,22 +39,24 @@ passport.use(new FacebookStrategy({
     // asynchronous verification, for effect...
     process.nextTick(function () {
       Models.User
-        .findOrCreate({
-          where: {
-            provider: 'Facebook',
-            loginId: profile.id
-          },
-          defaults: {
+        .findOne({ provider: 'Facebook', loginId: profile.id })
+        .exec()
+        .then(function (user) {
+          if (user) {
+            return done(null, user);
+          }
+
+          new Models.User({
             name: profile.name.familyName + profile.name.givenName,
             nickname: profile.displayName,
             provider: 'Facebook',
             loginId: profile.id,
             photo: profile.photos[0].value
-          }
+          }).save()
+            .then(function (user) {
+              return done(null, user);
+            })
         })
-        .spread(function (user, created) {
-          return done(null, user);
-        });
     });
   }
 ));
@@ -72,22 +74,21 @@ router.get('/', function (req, res) {
 
 // To get all user data
 router.get('/users', function (req, res) {
-  Models.User.findAll()
+  Models.User.find({})
+    .exec()
     .then(function (users) {
       res.json(users);
-    }, function (err) {
-      throw err;
     });
 });
 
 // To get all posts
 router.get('/posts', function (req, res) {
-  Models.Post.findAll({include: [{model: Models.User, required: true}]})
+  Models.Post.find({})
+    .populate('user')
+    .exec()
     .then(function (posts) {
-      res.json({data: posts});
-    }, function (err) {
-      throw err;
-    });
+      res.json(posts);
+    })
 });
 
 // GET /login/facebook

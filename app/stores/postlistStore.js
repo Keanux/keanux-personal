@@ -30,7 +30,7 @@ postlistStore.dispatchToken = Dispatcher.register(function (payload) {
     getAllPosts: function (payload) {
       $.get('/api/posts')
         .then(function (data) {
-          postlist = data.data;
+          postlist = data;
 
           postlistStore.emit('change');
         });

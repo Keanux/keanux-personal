@@ -1,21 +1,17 @@
 'use strict';
 
-module.exports = function (sequelize, DataTypes) {
-  var Post = sequelize.define(
-    'Post',
-    {
-      title: DataTypes.STRING,
-      subtitle: DataTypes.STRING,
-      content: DataTypes.TEXT,
-      unique_id: DataTypes.STRING
-    },
-    {
-      classMethods: {
-        associate: function (models) {
-          models.Post.belongsTo(models.User);
-        }
-      }
-    });
+var mongoose = require( 'mongoose' );
+var Schema   = mongoose.Schema;
 
-  return Post;
-};
+var postSchema = new Schema({
+  title: String,
+  subtitle: String,
+  content: String,
+  createdAt:{ type: Date, default: Date.now },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }
+});
+
+module.exports = mongoose.model('Post', postSchema);

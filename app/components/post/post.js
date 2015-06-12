@@ -19,7 +19,7 @@ var Post = React.createClass({
         <PostMeta username={this.props.username} nickname={this.props.nickname} createdAt={this.props.createdAt}/>
 
         <h2 className="postTitle">
-          <a href={"http://keanux.com/p/" + this.props.unique_id}>{this.props.title}</a>
+          <a href="#">{this.props.title}</a>
         </h2>
 
         <h3 className="postSubTitle">

@@ -11,11 +11,10 @@ var PostList = React.createClass({
   render: function () {
     var postNodes = this.props.data.map(function (post, index) {
       return (
-        <Post unique_id={post.unique_id}
-              nickname={ post.User.nickname }
+        <Post nickname={ post.user.nickname }
               title={post.title}
               subtitle={post.subtitle}
-              username={ post.User.name }
+              username={ post.user.name }
               createdAt={post.createdAt}
               key={index}>
           {post.content}
