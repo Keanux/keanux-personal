@@ -19,35 +19,35 @@
 
 # 快速開始
 
-1. 將專案clone 至本機
+將專案clone 至本機
 
-        git clone git@github.com:Keanux/keanux-personal.git
+```
+$ git clone git@github.com:Keanux/keanux-personal.git
+```
 
-1. 準備好node.js環境，打開Terminal進入專案資料夾，使用以下指令安裝並建立測試資料庫，然後啟動網站
+準備好 node.js 環境，打開 Terminal 進入專案資料夾，使用以下指令安裝並建立測試資料庫，然後啟動網站
 
-        npm install
-        node data/seed.js
-        node server.js
+```
+$ npm install
+$ node data/seed.js
+$ node server.js
+```
 
-1. 開啟瀏覽器輸入 http://localhost:8080
+開啟瀏覽器輸入 http://localhost:8080
 
 # 更新到最新版本
 
-第一項和第二項的config檔只需要設定過一次，之後直接執行第三項即可。
+新增遠端網址 `upstream`，此名稱可以任意修正
 
-1. 新增/編輯 keanux-personal/.git/config 檔
-1. 使用文字編輯器開啟新檔，加上下列文字，並另存新檔名為 .git/config 於keanux-personal 檔案夾下。
+```
+$ git remote add upstream https://github.com/Keanux/keanux-personal.git
+```
 
-        [remote "upstream"]
-                url = https://github.com/Keanux/keanux-personal.git
-                fetch = +refs/heads/*:refs/remotes/upstream/*
-        [branch "upstream/master"]
-                remote = upstream
-                merge = refs/heads/master
+更新遠端最新程式碼
 
-1. 命令列於 keanux-personal 目錄中執行：
-
-        git pull upstream master
+```
+$ git pull upstream master
+```
 
 # Copyright & License
 
