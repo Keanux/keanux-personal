@@ -1,201 +1,201 @@
 body {
-    font-family: "Microsoft Jhenghei", "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Microsoft Jhenghei", "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 h1 {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 50px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    margin-bottom: 30px;
-    margin-top: 12px;
-    text-align: center;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 50px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  margin-top: 12px;
+  text-align: center;
 }
 
 h2 {
-    padding: 0;
-    margin-top: 16px;
-    margin-bottom: 4px;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 4px;
 }
 
 h3 {
-    padding: 0;
-    margin: 0;
-    color: rgba(0, 0, 0, 0.3);
-    font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: normal;
 }
 
 p, ul {
-    margin: 0;
+  margin: 0;
 }
 
 #content {
-    width: 100%;
-    max-width: 700px;
-    overflow: hidden;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-.show{
-    display: block;
+.show {
+  display: block;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 /* Post */
 .post {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 50px;
-    padding-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .postAuthor {
-    margin-top: 4px;
+  margin-top: 4px;
 }
 
 .postTitle {
-    font-size: 42px;
+  font-size: 42px;
 }
 
 .postContent {
-    /*display: none;*/
-    font-size: 18px;
-    line-height: 30px;
-    margin-top: 30px;
-    overflow: hidden;
-    height: 90px;
+  /*display: none;*/
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 30px;
+  overflow: hidden;
+  height: 90px;
 }
 
 .postMetaInline-avatar {
-    width: 36px;
-    height: 36px;
-    display: table-cell;
+  width: 36px;
+  height: 36px;
+  display: table-cell;
 }
 
 .avatar-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
 }
 
 .postMetaInline-feedSummary {
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 14px;
-    line-height: 1.4;
-    padding-left: 10px;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.4;
+  padding-left: 10px;
 }
 
 .postMetaInline--supplemental {
-    display: block;
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 12px;
-    line-height: 1.1;
+  display: block;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  line-height: 1.1;
 }
 
 /* Nav */
 .nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    outline: 0;
-    background-color: #232322;
-    z-index: 300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  outline: 0;
+  background-color: #232322;
+  z-index: 300;
 }
 
 .nav-logo {
-    box-sizing: initial;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 8px;
-    height: 26px;
-    width: 26px;
-    z-index: 700;
-    background-color: #333332;
-    text-align: center;
-    border: 0;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
+  box-sizing: initial;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 8px;
+  height: 26px;
+  width: 26px;
+  z-index: 700;
+  background-color: #333332;
+  text-align: center;
+  border: 0;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
 }
 
 .nav-logo h1 {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-    margin: 0;
-    padding: 0;
-    line-height: 26px;
-    font-size: 22px;
-    color: #FFF;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  line-height: 26px;
+  font-size: 22px;
+  color: #FFF;
 }
 
 .nav-menu {
-    text-align: left;
-    background: #ccc;
-    width: 280px;
-    height: 100%;
+  text-align: left;
+  background: #ccc;
+  width: 280px;
+  height: 100%;
 }
 
 .nav-menu-list {
-    list-style-type: none;
-    padding-top: 10px;
-    padding-left: 20px;
+  list-style-type: none;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 .nav-menu-item {
-    padding: 5px;
-    line-height: 24px;
-    color: #555;
-    font-size: 14px;
-    font-weight: bold;
+  padding: 5px;
+  line-height: 24px;
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .nav-menu-title {
-    line-height: 24px;
-    vertical-align: text-bottom;
+  line-height: 24px;
+  vertical-align: text-bottom;
 }
 
 /* Icon */
 .icon {
-    font-style: normal;
-    display: inline-block;
-    vertical-align: baseline;
-    width: 24px;
-    height: 24px;
-    margin-right: 15px;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
 }
 
 .icons-search {
-    background-image: url(../img/search.png);
-    background-size: 18px 18px !important;
-    background-repeat: no-repeat;
+  background-image: url(../img/search.png);
+  background-size: 18px 18px !important;
+  background-repeat: no-repeat;
 }
 
 .icons-keanux {
-    color: #000;
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 22px;
-    font-weight: bold;
+  color: #000;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .icons-avatar {
-    color: #FFF;
+  color: #FFF;
 }
 
 .icons-avatar img {
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
 }
