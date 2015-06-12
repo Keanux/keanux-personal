@@ -15,7 +15,9 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "start": "node server.js"
+    "start": "node server.js",
+    "jscs": "jscs ./",
+    "jshint": "jshint ./"
   },
   "bugs": "https://github.com/Keanux/keanux-personal/issues",
   "contributors": "https://github.com/Keanux/keanux-personal/graphs/contributors",
