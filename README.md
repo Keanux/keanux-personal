@@ -33,6 +33,8 @@
 
 # 更新到最新版本
 
+第一項和第二項的config檔只需要設定過一次，之後直接執行第三項即可。
+
 1. 新增/編輯 keanux-personal/.git/config 檔
 1. 使用文字編輯器開啟新檔，加上下列文字，並另存新檔名為 .git/config 於keanux-personal 檔案夾下。
 
