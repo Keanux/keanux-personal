@@ -22,6 +22,16 @@
 1. 安裝完成後，可以使用以下指令檢查是否正常運作
 
 		brew doctor
+		
+### 安裝Mongo DB
+
+1. Mongo DB是一套NoSQL資料庫，我們可以透過brew來安裝MongoDB
+
+		brew install mongodb
+		
+1. 啟動Mongo DB
+
+		mongod --dbpath <資料庫存放位置>
 
 ### 安裝node.js (nvm)
 
