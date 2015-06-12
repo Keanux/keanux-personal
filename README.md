@@ -31,6 +31,22 @@
 
 1. 開啟瀏覽器輸入 http://localhost:8080
 
+# 更新到最新版本
+
+1. 新增/編輯 keanux-personal/.git/config 檔
+1. 使用文字編輯器開啟新檔，加上下列文字，並另存新檔名為 .git/config 於keanux-personal 檔案夾下。
+
+        [remote "upstream"]
+                url = https://github.com/Keanux/keanux-personal.git
+                fetch = +refs/heads/*:refs/remotes/upstream/*
+        [branch "upstream/master"]
+                remote = upstream
+                merge = refs/heads/master
+
+1. 命令列於 keanux-personal 目錄中執行：
+
+        git pull upstream master
+
 # Copyright & License
 
 Copyright (c) 2015 Keanux - Released under the [MIT license](LICENSE).
