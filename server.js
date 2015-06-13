@@ -29,12 +29,12 @@ app.use(express.static('public'));
 // Register Route and Bundle.js
 var apiRoute = require('./routes/api');
 app.use('/api', apiRoute)
-    .use('/bundle.js', browserify.serve({
-        entry: __dirname + '/app/main',
-        debug: true,
-        watch: true,
-        transforms: [reactify]
-    }));
+  .use('/bundle.js', browserify.serve({
+    entry: __dirname + '/app/main',
+    debug: true,
+    watch: true,
+    transforms: [reactify]
+  }));
 
 // Start application
 var port = process.env.PORT || 8080;

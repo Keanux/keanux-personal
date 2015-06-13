@@ -8,9 +8,9 @@ var PostBox = require('./components/post/postbox');
 var Nav = require('./components/nav/nav');
 
 React.render(
-    <div>
-        <Nav />
-        <PostBox />
-    </div>
-    , document.getElementById('content')
+  <div>
+    <Nav />
+    <PostBox />
+  </div>
+  , document.getElementById('content')
 );

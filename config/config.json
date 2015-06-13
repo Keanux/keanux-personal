@@ -1,20 +1,11 @@
 {
   "development": {
-    "dialect": "sqlite",
-    "storage": "./data/keanux.development.sqlite"
+    "dbpath":"mongodb://localhost/keanux"
   },
   "test": {
-    "username": "USERNAME",
-    "password": "PASSWORD",
-    "database": "keanux_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dbpath":"mongodb://localhost/keanux_test"
   },
   "production": {
-    "username": "USERNAME",
-    "password": "PASSWORD",
-    "database": "keanux",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dbpath":"mongodb://localhost/keanux"
   }
 }

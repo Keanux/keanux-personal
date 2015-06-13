@@ -25,6 +25,12 @@
 $ git clone git@github.com:Keanux/keanux-personal.git
 ```
 
+啟動 Mongo DB 環境
+
+```
+$ mongod --dbpath <資料庫存放位置>
+```
+
 準備好 node.js 環境，打開 Terminal 進入專案資料夾，使用以下指令安裝並建立測試資料庫，然後啟動網站
 
 ```

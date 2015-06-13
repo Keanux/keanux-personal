@@ -13,31 +13,31 @@ var postlist = [];
 
 // Store
 var postlistStore = assign({}, EventEmitter.prototype, {
-    addChangeListener: function (callback) {
-        this.on('change', callback);
-    },
-    removeChangeListener: function (callback) {
-        this.off('change', callback);
-    },
-    getPosts: function () {
-        return postlist;
-    }
+  addChangeListener: function (callback) {
+    this.on('change', callback);
+  },
+  removeChangeListener: function (callback) {
+    this.off('change', callback);
+  },
+  getPosts: function () {
+    return postlist;
+  }
 });
 
 // Watch
 postlistStore.dispatchToken = Dispatcher.register(function (payload) {
-    var actions = {
-        getAllPosts: function (payload) {
-            $.get('/api/posts')
-                .then(function (data) {
-                    postlist = data.data;
+  var actions = {
+    getAllPosts: function (payload) {
+      $.get('/api/posts')
+        .then(function (data) {
+          postlist = data;
 
-                    postlistStore.emit('change');
-                });
-        }
-    };
+          postlistStore.emit('change');
+        });
+    }
+  };
 
-    actions[payload.action.type] && actions[payload.action.type](payload);
+  actions[payload.action.type] && actions[payload.action.type](payload);
 });
 
 module.exports = postlistStore;
