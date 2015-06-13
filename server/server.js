@@ -24,13 +24,13 @@ app.use(session({secret: 'keyboard cat'}));
 // persistent login sessions (recommended).
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/../client/public'));
 
 // Register Route and Bundle.js
 var apiRoute = require('./routes/api');
 app.use('/api', apiRoute)
   .use('/bundle.js', browserify.serve({
-    entry: __dirname + '/app/main',
+    entry: __dirname + '/../client/app/main',
     debug: true,
     watch: true,
     transforms: [reactify]
