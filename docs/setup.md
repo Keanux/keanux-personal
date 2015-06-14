@@ -79,11 +79,11 @@
 
 1. 建立資料表並且塞入測試資料
 
-		node data/seed.js
+		npm run-script seed
 
 1. 執行網站
 
-		node server.js
+		npm run-script start
 
 1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
 
@@ -144,11 +144,11 @@
 
 1. 建立資料表並且塞入測試資料
 
-		node data/seed.js
+		npm run-script seed
 
 1. 執行網站
 
-		node server.js
+		npm run-script start
 
 1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
 
@@ -199,10 +199,10 @@
 
 1. 建立資料表並且塞入測試資料
 
-		node data\seed.js
+		npm run-script seed
 
 1. 執行網站
 
-		node server.js
+		npm run-script start
 
 1. 打開 browser 到 http://localhost:8080，看到網站就代表成功囉！
