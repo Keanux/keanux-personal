@@ -40,7 +40,9 @@ postlistStore.dispatchToken = Dispatcher.register(function (payload) {
     }
   };
 
-  actions[payload.action.type] && actions[payload.action.type](payload);
+  if(actions[payload.action.type]){
+    actions[payload.action.type](payload);
+  }
 });
 
 module.exports = postlistStore;

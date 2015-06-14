@@ -4,7 +4,7 @@ var gulp = require('gulp');
 gulp.task('lint', function () {
   return gulp.src('./client/**/*.js')
     .pipe(jshint({ linter: require('jshint-jsx').JSXHINT }))
-    .pipe(jshint.reporter('default'));
+    .pipe(jshint.reporter('fail', { verbose: true }));
 });
 
 gulp.task('default', ['lint']);

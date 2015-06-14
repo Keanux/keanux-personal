@@ -16,6 +16,5 @@ React.render(
   <div>
     <Nav />
     <PostBox />
-  </div>
-  , document.getElementById('content')
+  </div>, document.getElementById('content')
 );

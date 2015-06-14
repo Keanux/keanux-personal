@@ -13,7 +13,6 @@ var PostMeta = require('./postmeta');
 var Post = React.createClass({
   render: function () {
     var rawMarkup = Converter.makeHtml(this.props.children.toString());
-    var icon = "https://graph.facebook.com/" + this.props.username + "/picture?width=120&height=120";
     return (
       <div className="post">
         <PostMeta username={this.props.username} nickname={this.props.nickname} createdAt={this.props.createdAt}/>
