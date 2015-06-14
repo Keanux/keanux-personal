@@ -1,6 +1,7 @@
 # Keanux-Personal
 
 [![Join the chat at https://gitter.im/Keanux/Keanux-Public](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Keanux/Keanux-Public?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/Keanux/keanux-personal.svg?branch=master)](https://travis-ci.org/kirkchen/keanux-personal)
 
 這是一個一起學習 Node.js 和 React 的計畫，透過一起實作，製作個人的開源寫作平台。
 
