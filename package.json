@@ -14,9 +14,8 @@
     "url": "git://github.com/Keanux/keanux-personal.git"
   },
   "scripts": {
-    "prestart": "npm install",
     "start": "node server/server.js",
-    "init": "node server/data/seed.js",
+    "seed": "node server/data/seed.js",
     "jscs": "jscs ./",
     "jshint": "jshint ./"
   },

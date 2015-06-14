@@ -2,7 +2,7 @@
 
 [![Join the chat at https://gitter.im/Keanux/Keanux-Public](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Keanux/Keanux-Public?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-這是一個一起學習Node.js和React的計畫，透過一起實作，製作個人的開源寫作平台。
+這是一個一起學習 Node.js 和 React 的計畫，透過一起實作，製作個人的開源寫作平台。
 
 - [Hackpad](https://keanux.hackpad.com/INTRO-rDTHFqtALl2)
 - [Facebook Page](https://www.facebook.com/trykeanux)
@@ -11,11 +11,11 @@
 
 # 功能
 
-目前僅提供顯示範例頁面，編寫及其他功能的部分正在開發，有任何錯誤或功能上的想法都歡迎在[Issue](https://github.com/Keanux/keanux-personal/issues)留言。
+目前僅提供顯示範例頁面，編寫及其他功能的部分正在開發，有任何錯誤或功能上的想法都歡迎在 [Issue](https://github.com/Keanux/keanux-personal/issues) 留言。
 
 # 環境安裝
 
-參考[安裝說明](docs/setup.md)或是使用[Keanux-Vagrant](https://github.com/Keanux/keanux-vagrant)
+參考[安裝說明](docs/setup.md)或是使用 [Keanux-Vagrant](https://github.com/Keanux/keanux-vagrant)
 
 # 快速開始
 
@@ -35,13 +35,8 @@ $ mongod --dbpath <資料庫存放位置>
 
 ```
 $ npm install
-$ npm run init
-```
-
-之後每次啟動程式只需要執行
-
-```
-$ npm start
+$ npm run-script seed
+$ npm run-script start
 ```
 
 開啟瀏覽器輸入 http://localhost:8080
