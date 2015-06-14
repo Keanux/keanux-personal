@@ -3,7 +3,6 @@
 // Required Library
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
-var $ = require('jquery');
 
 // Flux
 var Dispatcher = require('../dispatchers/appDispatcher');
@@ -28,11 +27,15 @@ var postlistStore = assign({}, EventEmitter.prototype, {
 postlistStore.dispatchToken = Dispatcher.register(function (payload) {
   var actions = {
     getAllPosts: function (payload) {
-      $.get('/api/posts')
-        .then(function (data) {
+      fetch('/api/posts')
+        .then(function (response) {
+          return response.json();
+        }).then(function(data) {
           postlist = data;
 
           postlistStore.emit('change');
+        }).catch(function(ex) {
+          console.log('json parsing failed', ex);
         });
     }
   };

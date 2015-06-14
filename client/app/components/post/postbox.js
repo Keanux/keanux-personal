@@ -2,7 +2,6 @@
 
 // Required Library
 var React = require('react');
-var $ = require('jquery');
 
 // Related Control
 var PostList = require('./postlist');
