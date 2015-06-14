@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react/addons');
+var classnames = require('classnames');
 
 var Nav = React.createClass({
   getInitialState: function () {
@@ -30,13 +31,10 @@ var Nav = React.createClass({
     });
   },
   render: function () {
-    var cx = React.addons.classSet;
-    var logoClass = cx({
-      'nav-logo': true,
+    var logoClass = classnames('nav-logo', {
       'hide': !this.state.hideMenu
     });
-    var menuClass = cx({
-      'nav-menu': true,
+    var menuClass = classnames('nav-menu', {
       'hide': this.state.hideMenu
     });
 
