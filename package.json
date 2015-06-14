@@ -25,6 +25,7 @@
   "license": "MIT",
   "main": "server.js",
   "dependencies": {
+    "bluebird": "^2.9.27",
     "body-parser": "~1.12.4",
     "connect-browserify": "^4.0.0",
     "express": "~4.12.4",
