@@ -1,7 +1,6 @@
 'use strict';
 
 var React = require('react/addons');
-var $ = require('jquery');
 
 var Nav = React.createClass({
   getInitialState: function () {
@@ -13,12 +12,16 @@ var Nav = React.createClass({
   },
   componentDidMount: function () {
     var self = this;
-    $.get('/api/login/getStatus')
-      .then(function (result) {
+    fetch('/api/login/getStatus')
+      .then(function (response) {
+        return response.json();
+      }).then(function(result) {
         self.setState({
           isLogin: result.isLogin,
           user: result.user
         });
+      }).catch(function(err) {
+        console.log('json parsing failed', err);
       });
   },
   handleToggleMenu: function () {

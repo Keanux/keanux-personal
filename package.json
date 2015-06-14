@@ -30,7 +30,6 @@
     "express": "~4.12.4",
     "express-session": "^1.11.2",
     "flux": "^2.0.3",
-    "jquery": "^2.1.4",
     "mongoose": "^4.0.5",
     "node-jsx": "^0.13.3",
     "object-assign": "^3.0.0",
@@ -40,7 +39,8 @@
     "react-ago-component": "^0.6.1",
     "reactify": "^1.1.1",
     "showdown": "^1.0.2",
-    "sqlite3": "^3.0.8"
+    "sqlite3": "^3.0.8",
+    "whatwg-fetch": "^0.9.0"
   },
   "devDependencies": {
     "jscs": "^1.13.1",
