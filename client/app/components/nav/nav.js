@@ -20,8 +20,8 @@ var Nav = React.createClass({
           isLogin: result.isLogin,
           user: result.user
         });
-      }).catch(function(ex) {
-        console.log('json parsing failed', ex);
+      }).catch(function(err) {
+        console.log('json parsing failed', err);
       });
   },
   handleToggleMenu: function () {
