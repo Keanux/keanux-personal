@@ -8,7 +8,7 @@ var Nav = React.createClass({
       hideMenu: true,
       isLogin: false,
       user: null
-    }
+    };
   },
   componentDidMount: function () {
     var self = this;
@@ -27,7 +27,7 @@ var Nav = React.createClass({
   handleToggleMenu: function () {
     this.setState({
       hideMenu: !this.state.hideMenu
-    })
+    });
   },
   render: function () {
     var cx = React.addons.classSet;
