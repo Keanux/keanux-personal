@@ -55,8 +55,8 @@ passport.use(new FacebookStrategy({
           }).save()
             .then(function (user) {
               return done(null, user);
-            })
-        })
+            });
+        });
     });
   }
 ));
@@ -88,7 +88,7 @@ router.get('/posts', function (req, res) {
     .exec()
     .then(function (posts) {
       res.json(posts);
-    })
+    });
 });
 
 // GET /login/facebook
