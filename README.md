@@ -44,16 +44,22 @@ $ npm run-script start
 
 # 更新到最新版本
 
-新增遠端網址 `upstream`，此名稱可以任意修正
+新增遠端 Repo 網址 `upstream`，此名稱可以任意修改
 
 ```
 $ git remote add upstream https://github.com/Keanux/keanux-personal.git
 ```
 
-更新遠端最新程式碼
+更新遠端最新程式碼（用 merge 方式）
 
 ```
 $ git pull upstream master
+```
+
+更新遠端最新程式碼（用 rebase 方式）
+
+```
+$ git pull --rebase upstream master
 ```
 
 # Copyright & License
