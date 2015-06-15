@@ -1,12 +1,20 @@
 var jshint = require('gulp-jshint');
-var gulp = require('gulp');
 var stylish = require('jshint-stylish');
+var jscs = require('gulp-jscs');
+var gulp = require('gulp');
+
+var files = ['./server/**/*.js', './clinet/**/*.js'];
 
 gulp.task('jshint', function () {
-  return gulp.src(['./server/**/*.js', './clinet/**/*.js'])
+  return gulp.src(files)
     .pipe(jshint({ linter: require('jshint-jsx').JSXHINT }))
     .pipe(jshint.reporter(stylish))
     .pipe(jshint.reporter('fail', { verbose: true }));
 });
 
-gulp.task('default', ['jshint']);
+gulp.task('jscs', function () {
+  return gulp.src(files)
+    .pipe(jscs());
+});
+
+gulp.task('default', ['jshint', 'jscs']);
