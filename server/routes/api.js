@@ -17,11 +17,11 @@ var FACEBOOK_APP_SECRET = 'FACEBOOK_APP_SECRET';
 //   the user by ID when deserializing.  However, since this example does not
 //   have a database of user records, the complete Facebook profile is serialized
 //   and deserialized.
-passport.serializeUser(function (user, done) {
+passport.serializeUser(function(user, done) {
   done(null, user);
 });
 
-passport.deserializeUser(function (obj, done) {
+passport.deserializeUser(function(obj, done) {
   done(null, obj);
 });
 
@@ -35,13 +35,13 @@ passport.use(new FacebookStrategy({
     callbackURL: 'http://localhost:8080/api/login/facebook/callback',
     profileFields: ['id', 'name', 'displayName', 'photos']
   },
-  function (accessToken, refreshToken, profile, done) {
+  function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
-    process.nextTick(function () {
+    process.nextTick(function() {
       Models.User
         .findOne({ provider: 'Facebook', loginId: profile.id })
         .exec()
-        .then(function (user) {
+        .then(function(user) {
           if (user) {
             return done(null, user);
           }
@@ -53,12 +53,13 @@ passport.use(new FacebookStrategy({
             loginId: profile.id,
             photo: profile.photos[0].value
           }).save()
-            .then(function (user) {
+            .then(function(user) {
               return done(null, user);
             });
         });
     });
   }
+
 ));
 
 // Models
@@ -68,25 +69,25 @@ var Models = require('../models');
 var router = express.Router();
 
 // To make sure everything is working
-router.get('/', function (req, res) {
+router.get('/', function(req, res) {
   res.json({message: 'hooray! welcome to our api!'});
 });
 
 // To get all user data
-router.get('/users', function (req, res) {
+router.get('/users', function(req, res) {
   Models.User.find({})
     .exec()
-    .then(function (users) {
+    .then(function(users) {
       res.json(users);
     });
 });
 
 // To get all posts
-router.get('/posts', function (req, res) {
+router.get('/posts', function(req, res) {
   Models.Post.find({})
     .populate('user')
     .exec()
-    .then(function (posts) {
+    .then(function(posts) {
       res.json(posts);
     });
 });
@@ -98,7 +99,7 @@ router.get('/posts', function (req, res) {
 //   redirect the user back to this application at /login/facebook/callback
 router.get('/login/facebook',
   passport.authenticate('facebook'),
-  function (req, res) {
+  function(req, res) {
     // The request will be redirected to Facebook for authentication, so this
     // function will not be called.
   });
@@ -110,12 +111,12 @@ router.get('/login/facebook',
 //   which, in this example, will redirect the user to the home page.
 router.get('/login/facebook/callback',
   passport.authenticate('facebook', {failureRedirect: '/login'}),
-  function (req, res) {
+  function(req, res) {
     res.redirect('/');
   });
 
 // GET /login/getStatus
-router.get('/login/getStatus', function (req, res) {
+router.get('/login/getStatus', function(req, res) {
   res.json({
     isLogin: req.isAuthenticated(),
     user: req.user
