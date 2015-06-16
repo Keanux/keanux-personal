@@ -3,7 +3,11 @@ var stylish = require('jshint-stylish');
 var jscs = require('gulp-jscs');
 var gulp = require('gulp');
 
-var files = ['./server/**/*.js', './clinet/**/*.js'];
+var files = [
+  './server/**/*.js',
+  './clinet/**/*.js',
+  './test/**/*.js'
+];
 
 gulp.task('jshint', function () {
   return gulp.src(files)

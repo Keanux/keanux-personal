@@ -90,11 +90,6 @@ router.get('/facebook/callback',
   });
 
 // GET /login/getStatus
-router.get('/getStatus', function(req, res) {
-  res.json({
-    isLogin: req.isAuthenticated(),
-    user: req.user
-  });
-});
+router.get('/getStatus', require('./getStatus'));
 
 module.exports = router;
