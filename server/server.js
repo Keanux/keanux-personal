@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(session({secret: 'keyboard cat'}));
 
 // Initialize Passport!  Also use passport.session() middleware, to support
-// persistent login sessions (recommended).
+// persistent logins sessions (recommended).
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, '../client/public')));

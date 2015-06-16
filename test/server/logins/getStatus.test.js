@@ -1,8 +1,10 @@
+'use strict';
+
 var sinon = require('sinon');
 var chai = require('chai');
 var expect = chai.expect;
 
-var getStatus = require('../../../server/routes/login/getStatus');
+var getStatus = require('../../../server/routes/logins/getStatus');
 
 describe('Login', function() {
   describe('Get Status', function() {

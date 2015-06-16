@@ -13,7 +13,7 @@ var Nav = React.createClass({
   },
   componentDidMount: function () {
     var self = this;
-    fetch('/api/login/getStatus')
+    fetch('/api/logins/getStatus')
       .then(function (response) {
         return response.json();
       }).then(function(result) {
@@ -67,7 +67,7 @@ var Nav = React.createClass({
                 </a>
               </li> :
               <li className="nav-menu-item">
-                <a title="Login" href="api/login/facebook">
+                <a title="Login" href="api/logins/facebook">
                     <span className="nav-menu-title">
                       Facebook Login
                     </span>

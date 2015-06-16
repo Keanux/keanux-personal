@@ -10,13 +10,6 @@ var router = express.Router();
 var Models = require('../../models');
 
 // To get all posts
-router.get('/', function(req, res) {
-  Models.Post.find({})
-    .populate('user')
-    .exec()
-    .then(function(posts) {
-      res.json(posts);
-    });
-});
+router.get('/', require('./getPosts'));
 
 module.exports = router;

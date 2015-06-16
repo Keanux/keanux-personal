@@ -15,7 +15,7 @@ var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
 // Passport session setup.
-//   To support persistent login sessions, Passport needs to be able to
+//   To support persistent logins sessions, Passport needs to be able to
 //   serialize users into and deserialize users out of the session.  Typically,
 //   this will be as simple as storing the user ID when serializing, and finding
 //   the user by ID when deserializing.  However, since this example does not
@@ -36,7 +36,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new FacebookStrategy({
     clientID: config.development.facebook.appId,
     clientSecret: config.development.facebook.appSecret,
-    callbackURL: 'http://localhost:8080/api/login/facebook/callback',
+    callbackURL: 'http://localhost:8080/api/logins/facebook/callback',
     profileFields: ['id', 'name', 'displayName', 'photos']
   },
   function(accessToken, refreshToken, profile, done) {
@@ -66,11 +66,11 @@ passport.use(new FacebookStrategy({
 
 ));
 
-// GET /login/facebook
+// GET /logins/facebook
 //   Use passport.authenticate() as route middleware to authenticate the
 //   request.  The first step in Facebook authentication will involve
 //   redirecting the user to facebook.com.  After authorization, Facebook will
-//   redirect the user back to this application at /login/facebook/callback
+//   redirect the user back to this application at /logins/facebook/callback
 router.get('/facebook',
   passport.authenticate('facebook'),
   function(req, res) {
@@ -78,18 +78,18 @@ router.get('/facebook',
     // function will not be called.
   });
 
-// GET /login/facebook/callback
+// GET /logins/facebook/callback
 //   Use passport.authenticate() as route middleware to authenticate the
 //   request.  If authentication fails, the user will be redirected back to the
-//   login page.  Otherwise, the primary route function function will be called,
+//   logins page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
 router.get('/facebook/callback',
-  passport.authenticate('facebook', {failureRedirect: '/login'}),
+  passport.authenticate('facebook', {failureRedirect: '/logins'}),
   function(req, res) {
     res.redirect('/');
   });
 
-// GET /login/getStatus
+// GET /logins/getStatus
 router.get('/getStatus', require('./getStatus'));
 
 module.exports = router;

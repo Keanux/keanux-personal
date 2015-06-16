@@ -8,6 +8,6 @@ var router = express.Router();
 
 // To get all posts
 router.use('/posts', require('./posts'));
-router.use('/login', require('./login'));
+router.use('/logins', require('./logins'));
 
 module.exports = router;
