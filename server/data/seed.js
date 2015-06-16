@@ -5,7 +5,7 @@ var model = require('../models');
 
 Promise.all([
   model.Post.remove(),
-  model.User.remove(),
+  model.User.remove()
 ]).then(function() {
   console.log('Database Clear');
 
