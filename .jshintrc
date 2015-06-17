@@ -14,5 +14,6 @@
   "undef": true,
   "unused": "vars",
   "strict": true,
-  "predef": [ "-Promise" ]
+  "predef": ["-Promise"],
+  "mocha": true
 }

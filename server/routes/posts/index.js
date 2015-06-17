@@ -7,7 +7,6 @@ var express = require('express');
 var router = express.Router();
 
 // To get all posts
-router.use('/posts', require('./posts'));
-router.use('/logins', require('./logins'));
+router.get('/', require('./getPosts'));
 
 module.exports = router;

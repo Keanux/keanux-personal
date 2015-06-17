@@ -1,11 +1,23 @@
 {
   "development": {
-    "dbpath":"mongodb://localhost/keanux"
+    "dbpath":"mongodb://localhost/keanux",
+    "facebook":{
+      "appId":"FACEBOOK_APP_ID",
+      "appSecret":"FACEBOOK_APP_SECRET"
+    }
   },
   "test": {
-    "dbpath":"mongodb://localhost/keanux_test"
+    "dbpath":"mongodb://localhost/keanux_test",
+    "facebook":{
+      "appId":"FACEBOOK_APP_ID",
+      "appSecret":"FACEBOOK_APP_SECRET"
+    }
   },
   "production": {
-    "dbpath":"mongodb://localhost/keanux"
+    "dbpath":"mongodb://localhost/keanux",
+    "facebook":{
+      "appId":"FACEBOOK_APP_ID",
+      "appSecret":"FACEBOOK_APP_SECRET"
+    }
   }
 }
