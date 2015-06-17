@@ -1,6 +1,6 @@
 'use strict';
 
-function userSerialization(passport){
+function userSerialization(passport) {
   passport.serializeUser(function(user, done) {
     done(null, user);
   });
@@ -10,4 +10,5 @@ function userSerialization(passport){
   });
 
 }
+
 module.exports = userSerialization;

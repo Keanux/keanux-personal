@@ -14,5 +14,13 @@
   "undef": true,
   "unused": "vars",
   "strict": true,
-  "predef": [ "-Promise" ]
+  "globals"   : {
+    "describe"   : false,
+    "it"         : false,
+    "before"     : false,
+    "beforeEach" : false,
+    "after"      : false,
+    "afterEach"  : false,
+    "Promise"    : false
+  }
 }
