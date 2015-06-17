@@ -11,6 +11,11 @@ var browserify = require('connect-browserify');
 // Passport Library
 var passport = require('passport');
 
+// Mongoose Setting
+var mongoose = require('mongoose');
+var config = require('./config/config.json');
+mongoose.connect(config.development.dbpath);
+
 // React Related Library
 var reactify = require('reactify');
 var nodeJsx = require('node-jsx');
