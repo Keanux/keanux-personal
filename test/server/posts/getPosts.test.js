@@ -4,14 +4,13 @@ var sinon = require('sinon');
 var chai = require('chai');
 var expect = chai.expect;
 
-var mongoose = require('mongoose');
 var Models = require('../../../server/models');
 var getPosts = require('../../../server/routes/posts/getPosts');
 
 describe('Posts', function() {
   describe('Get Posts', function() {
-    
     it('Get Posts should return all posts', function() {
+      // Arrange
       var req = {};
       var res = {};
       res.json = sinon.spy();
@@ -40,8 +39,10 @@ describe('Posts', function() {
         .withArgs({})
         .returns(mockFind);
 
+      // Act
       getPosts(req, res);
 
+      // Assert
       expect(res.json.calledOnce).to.equals(true);
       expect(Models.Post.find.calledOnce).to.equals(true);
     });

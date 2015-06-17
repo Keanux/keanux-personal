@@ -17,7 +17,8 @@
     "start": "node server/server.js",
     "seed": "node server/data/seed.js",
     "jscs": "jscs ./",
-    "jshint": "jshint ./"
+    "jshint": "jshint ./",
+    "test": "gulp test"
   },
   "bugs": "https://github.com/Keanux/keanux-personal/issues",
   "contributors": "https://github.com/Keanux/keanux-personal/graphs/contributors",
