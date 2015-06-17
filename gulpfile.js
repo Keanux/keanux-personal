@@ -13,14 +13,10 @@ var files = [
 
 // Test
 gulp.task('test', function () {
-  return gulp.src(testfiles)
-    .pipe(mocha())
-    .once('error', function () {
-      process.exit(1);
-    })
-    .once('end', function () {
-      process.exit();
-    });
+  return gulp.src(testfiles, { read: false })
+    .pipe(mocha({
+      reporter: 'spec'
+    }));
 });
 
 // Style Check
