@@ -10,11 +10,11 @@ var getPosts = require('../../../server/routes/posts/getPosts');
 
 describe('Posts', function() {
   describe('Get Posts', function() {
-    before(function(){
+    before(function() {
       sinon.stub(mongoose, 'connect');
     });
 
-    after(function(){
+    after(function() {
       mongoose.connect.restore();
     });
 
