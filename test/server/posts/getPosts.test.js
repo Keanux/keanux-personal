@@ -4,11 +4,19 @@ var sinon = require('sinon');
 var chai = require('chai');
 var expect = chai.expect;
 
+var mongoose = require('mongoose');
 var Models = require('../../../server/models');
 var getPosts = require('../../../server/routes/posts/getPosts');
 
 describe('Posts', function() {
   describe('Get Posts', function() {
+    before(function(){
+      sinon.stub(mongoose, 'connect');
+    });
+
+    after(function(){
+      mongoose.connect.restore();
+    });
 
     it('Get Posts should return all posts', function() {
       var req = {};
