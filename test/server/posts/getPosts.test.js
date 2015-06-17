@@ -10,14 +10,7 @@ var getPosts = require('../../../server/routes/posts/getPosts');
 
 describe('Posts', function() {
   describe('Get Posts', function() {
-    before(function() {
-      sinon.stub(mongoose, 'connect');
-    });
-
-    after(function() {
-      mongoose.connect.restore();
-    });
-
+    
     it('Get Posts should return all posts', function() {
       var req = {};
       var res = {};
