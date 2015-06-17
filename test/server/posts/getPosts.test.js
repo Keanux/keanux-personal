@@ -1,3 +1,5 @@
+'use strict';
+
 var sinon = require('sinon');
 var chai = require('chai');
 var expect = chai.expect;
@@ -5,7 +7,7 @@ var expect = chai.expect;
 var Models = require('../../../server/models');
 var getPosts = require('../../../server/routes/posts/getPosts');
 
-describe('Login', function() {
+describe('Posts', function() {
   describe('Get Posts', function() {
 
     it('Get Posts should return all posts', function() {
@@ -20,18 +22,20 @@ describe('Login', function() {
         user: { name: 'test' }
       };
       var mockFind = {
-        populate: function (table) {
+        populate: function(table) {
           return this;
         },
-        exec: function () {
+
+        exec: function() {
           return this;
         },
-        then: function (callback) {
+
+        then: function(callback) {
           callback([post]);
         }
       };
 
-      sinon.stub(Models.Post, "find")
+      sinon.stub(Models.Post, 'find')
         .withArgs({})
         .returns(mockFind);
 
