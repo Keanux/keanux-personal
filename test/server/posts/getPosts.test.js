@@ -4,11 +4,18 @@ var sinon = require('sinon');
 var chai = require('chai');
 var expect = chai.expect;
 
-var Models = require('../../../server/models');
-var getPosts = require('../../../server/routes/posts/getPosts');
+var mongoose = require('mongoose');
 
 describe('Posts', function() {
   describe('Get Posts', function() {
+    beforeEach(function() {
+      sinon.stub(mongoose, 'connect');
+    });
+
+    afterEach(function() {
+      mongoose.connect.restore();
+    });
+
     it('Get Posts should return all posts', function() {
       // Arrange
       var req = {};
@@ -35,11 +42,13 @@ describe('Posts', function() {
         }
       };
 
+      var Models = require('../../../server/models');
       sinon.stub(Models.Post, 'find')
         .withArgs({})
         .returns(mockFind);
 
       // Act
+      var getPosts = require('../../../server/routes/posts/getPosts');
       getPosts(req, res);
 
       // Assert
