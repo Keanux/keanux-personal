@@ -51,6 +51,7 @@
     "chai": "^3.0.0",
     "chai-datetime": "^1.4.0",
     "core-js": "^0.9.18",
+    "esprima-fb": "^15001.1.0-dev-harmony-fb",
     "gulp": "^3.9.0",
     "gulp-jscs": "^1.6.0",
     "gulp-jshint": "^1.11.0",

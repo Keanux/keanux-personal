@@ -18,8 +18,8 @@ var Ago = require('react-ago-component');
 chai.use(chaiDatetime);
 
 // Test
-describe('PostMeta', function () {
-  it('User data display correct ', function () {
+describe('PostMeta', function() {
+  it('User data display correct ', function() {
     var data = {
       username: 'user',
       nickname: 'nickname',
