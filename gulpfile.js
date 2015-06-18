@@ -3,17 +3,20 @@ var stylish = require('jshint-stylish');
 var jscs = require('gulp-jscs');
 var gulp = require('gulp');
 var mocha = require('gulp-mocha');
+var karma = require('karma').server;
 
-var testfiles = './test/**/*.js';
+var serverTestFiles = './test/server/**/*.js';
+var clientTestFiles = './test/client/**/*.js';
 var files = [
   './server/**/*.js',
   './clinet/**/*.js',
-  testfiles
+  serverTestFiles,
+  clientTestFiles
 ];
 
 // Test
-gulp.task('test', function () {
-  return gulp.src(testfiles, { read: false })
+gulp.task('mocha', function () {
+  return gulp.src(serverTestFiles, {read: false})
     .pipe(mocha({
       reporter: 'spec'
     }))
@@ -25,12 +28,19 @@ gulp.task('test', function () {
     });
 });
 
+gulp.task('karma', function (done) {
+  karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done);
+});
+
 // Style Check
 gulp.task('jshint', function () {
   return gulp.src(files)
-    .pipe(jshint({ linter: require('jshint-jsx').JSXHINT }))
+    .pipe(jshint({linter: require('jshint-jsx').JSXHINT}))
     .pipe(jshint.reporter(stylish))
-    .pipe(jshint.reporter('fail', { verbose: true }));
+    .pipe(jshint.reporter('fail', {verbose: true}));
 });
 
 gulp.task('jscs', function () {
@@ -38,4 +48,4 @@ gulp.task('jscs', function () {
     .pipe(jscs());
 });
 
-gulp.task('default', ['jshint', 'jscs']);
+gulp.task('lint', ['jshint', 'jscs']);

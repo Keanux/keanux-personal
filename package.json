@@ -18,7 +18,8 @@
     "seed": "node server/data/seed.js",
     "jscs": "jscs ./",
     "jshint": "jshint ./",
-    "test": "gulp test"
+    "lint": "gulp lint",
+    "test": "gulp mocha && gulp karma"
   },
   "bugs": "https://github.com/Keanux/keanux-personal/issues",
   "contributors": "https://github.com/Keanux/keanux-personal/graphs/contributors",
