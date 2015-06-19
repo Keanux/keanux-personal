@@ -9,5 +9,5 @@ before_script:
   - npm install -g gulp
 
 script:
-  - gulp test
-  - gulp
+  - npm run-script test
+  - npm run-script lint

@@ -1,4 +1,5 @@
 {
   "preset": "airbnb",
+  "esprima": "esprima-fb",
   "excludeFiles": ["node_modules/**"]
 }
