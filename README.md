@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/Keanux/keanux-personal.svg?branch=master)](https://travis-ci.org/Keanux/keanux-personal)
 
 這是一個一起學習 Node.js 和 React 的計畫，透過一起實作，製作個人的開源寫作平台。
-  
+
 - [Hackpad](https://keanux.hackpad.com/INTRO-rDTHFqtALl2)
 - [Facebook Page](https://www.facebook.com/trykeanux)
 - [Keanux-Personal Demo](http://keanux.com:8080)
@@ -20,7 +20,7 @@
 
 # 快速開始
 
-將專案clone 至本機
+將專案 clone 至本機
 
 ```
 $ git clone git@github.com:Keanux/keanux-personal.git
