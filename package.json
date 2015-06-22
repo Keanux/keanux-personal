@@ -43,7 +43,6 @@
     "react-ago-component": "^0.6.1",
     "reactify": "^1.1.1",
     "showdown": "^1.0.2",
-    "sqlite3": "^3.0.8",
     "whatwg-fetch": "^0.9.0"
   },
   "devDependencies": {
@@ -56,7 +55,6 @@
     "gulp": "^3.9.0",
     "gulp-jscs": "^1.6.0",
     "gulp-jshint": "^1.11.0",
-    "gulp-live-server": "0.0.20",
     "gulp-mocha": "^2.1.1",
     "jscs": "^1.13.1",
     "jshint": "^2.8.0",
