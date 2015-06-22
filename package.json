@@ -19,7 +19,8 @@
     "jscs": "jscs ./",
     "jshint": "jshint ./",
     "lint": "gulp lint",
-    "test": "gulp mocha && gulp karma"
+    "test": "gulp mocha && gulp karma",
+    "e2e": "gulp e2e"
   },
   "bugs": "https://github.com/Keanux/keanux-personal/issues",
   "contributors": "https://github.com/Keanux/keanux-personal/graphs/contributors",
@@ -55,6 +56,7 @@
     "gulp": "^3.9.0",
     "gulp-jscs": "^1.6.0",
     "gulp-jshint": "^1.11.0",
+    "gulp-live-server": "0.0.20",
     "gulp-mocha": "^2.1.1",
     "jscs": "^1.13.1",
     "jshint": "^2.8.0",

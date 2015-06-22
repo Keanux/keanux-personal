@@ -5,9 +5,17 @@ node_js:
   - '0.10'
   - '0.12'
 
+services:
+  - mongodb
+
 before_script:
-  - npm install -g gulp
+  - npm install -g gulp phantomjs
+  - phantomjs --webdriver 4444 &
+  - sleep 5 &
+  - npm start &
+  - sleep 5
 
 script:
   - npm run-script test
   - npm run-script lint
+  - npm run-script e2e
