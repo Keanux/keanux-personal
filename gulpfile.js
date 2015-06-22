@@ -7,11 +7,13 @@ var karma = require('karma').server;
 
 var serverTestFiles = './test/server/**/*.js';
 var clientTestFiles = './test/client/**/*.js';
+var e2eTestFiles = './test/e2e/**/*.js';
 var files = [
   './server/**/*.js',
   './clinet/**/*.js',
   serverTestFiles,
-  clientTestFiles
+  clientTestFiles,
+  e2eTestFiles
 ];
 
 // Test
@@ -33,6 +35,21 @@ gulp.task('karma', function (done) {
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
   }, done);
+});
+
+gulp.task('e2e', function (done) {
+  return gulp.src(e2eTestFiles, {read: false})
+    .pipe(mocha({
+      reporter: 'spec'
+    }))
+    .once('error', function () {
+
+      process.exit(1);
+    })
+    .once('end', function () {
+
+      process.exit();
+    });
 });
 
 // Style Check
