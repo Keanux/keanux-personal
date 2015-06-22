@@ -175,7 +175,13 @@
 
 ### 安裝 Git (版本控制系統)
 
-[官方下載](https://git-scm.com/download/win)
+1. [官方下載](https://git-scm.com/download/win)
+
+### 安裝 mongodb
+
+1. [官方下載](https://www.mongodb.org/downloads)
+
+1. 安裝 mongodb
 
 ### 下載 Keanux 程式
 
@@ -200,6 +206,10 @@
 1. 建立資料表並且塞入測試資料
 
 		npm run-script seed
+
+1. 啟動 mongodb
+
+    	mongod --dbpath <資料庫存放位置>
 
 1. 執行網站
 
