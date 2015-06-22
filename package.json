@@ -19,7 +19,8 @@
     "jscs": "jscs ./",
     "jshint": "jshint ./",
     "lint": "gulp lint",
-    "test": "gulp mocha && gulp karma"
+    "test": "gulp mocha && gulp karma",
+    "e2e": "gulp e2e"
   },
   "bugs": "https://github.com/Keanux/keanux-personal/issues",
   "contributors": "https://github.com/Keanux/keanux-personal/graphs/contributors",
@@ -42,7 +43,6 @@
     "react-ago-component": "^0.6.1",
     "reactify": "^1.1.1",
     "showdown": "^1.0.2",
-    "sqlite3": "^3.0.8",
     "whatwg-fetch": "^0.9.0"
   },
   "devDependencies": {
@@ -67,6 +67,7 @@
     "mocha": "^2.2.5",
     "node-libs-browser": "^0.5.2",
     "sinon": "^1.15.3",
+    "webdriverio": "^2.4.5",
     "webpack": "^1.9.11"
   }
 }
