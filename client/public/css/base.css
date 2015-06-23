@@ -79,7 +79,7 @@ img {
 .postMetaInline-avatar {
   width: 36px;
   height: 36px;
-  display: table-cell;
+  display: none;
 }
 
 .avatar-image {
@@ -93,7 +93,7 @@ img {
   vertical-align: middle;
   font-size: 14px;
   line-height: 1.4;
-  padding-left: 10px;
+  padding-left: 0px;
 }
 
 .postMetaInline--supplemental {
