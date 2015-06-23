@@ -56,6 +56,7 @@
     "gulp-jscs": "^1.6.0",
     "gulp-jshint": "^1.11.0",
     "gulp-mocha": "^2.1.1",
+    "gulp-protractor": "^1.0.0",
     "jscs": "^1.13.1",
     "jshint": "^2.8.0",
     "jshint-jsx": "^0.4.1",

@@ -4,14 +4,17 @@ var jscs = require('gulp-jscs');
 var gulp = require('gulp');
 var mocha = require('gulp-mocha');
 var karma = require('karma').server;
+var protractor = require("gulp-protractor").protractor;
 
 var serverTestFiles = './test/server/**/*.js';
 var clientTestFiles = './test/client/**/*.js';
+var e2eTestFiles = './test/e2e/**/*.js';
 var files = [
   './server/**/*.js',
   './clinet/**/*.js',
   serverTestFiles,
-  clientTestFiles
+  clientTestFiles,
+  e2eTestFiles
 ];
 
 // Test
@@ -33,6 +36,17 @@ gulp.task('karma', function (done) {
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
   }, done);
+});
+
+gulp.task('e2e', function () {
+  return gulp.src(e2eTestFiles)
+    .pipe(protractor({
+      configFile: "protractor.conf.js",
+      args: ['--baseUrl', 'http://localhost:8080']
+    }))
+    .on('error', function (e) {
+      throw e;
+    })
 });
 
 // Style Check
