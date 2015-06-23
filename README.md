@@ -42,6 +42,35 @@ $ npm run-script start
 
 開啟瀏覽器輸入 http://localhost:8080
 
+# 測試程式
+
+測試Server端程式碼
+
+```
+$ gulp mocha
+```
+
+測試Client端程式碼
+
+```
+$ gulp karma
+```
+
+測試網站功能 （自動化測試）
+
+```
+$ ./node_modules/protractor/bin/webdriver-manager update
+$ npm start
+// 開啟另外一個視窗
+$ gulp e2e
+```
+
+執行所有測試
+
+```
+$ npm test
+```
+
 # 更新到最新版本
 
 新增遠端 Repo 網址 `upstream`，此名稱可以任意修改
