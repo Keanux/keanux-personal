@@ -19,7 +19,7 @@
     "jscs": "jscs ./",
     "jshint": "jshint ./",
     "lint": "gulp lint",
-    "test": "gulp mocha && gulp karma"
+    "test": "gulp mocha && gulp karma && gulp e2e"
   },
   "bugs": "https://github.com/Keanux/keanux-personal/issues",
   "contributors": "https://github.com/Keanux/keanux-personal/graphs/contributors",
