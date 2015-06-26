@@ -4,7 +4,7 @@
 var Promise = require('bluebird');
 var model = require('../../models');
 
-exports.clearAll = function(){
+exports.clearAll = function() {
   console.log('Clear Database');
 
   return Promise.all([
@@ -13,14 +13,14 @@ exports.clearAll = function(){
   ]);
 };
 
-exports.createUser = function(user){
+exports.createUser = function(user) {
   console.log('Create User', user);
 
   return new model.User(user)
     .save();
 };
 
-exports.createPost = function(post){
+exports.createPost = function(post) {
   console.log('Create Post', post);
 
   return new model.Post(post)

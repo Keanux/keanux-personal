@@ -4,7 +4,7 @@ var Promise = require('bluebird');
 var database = require('./database');
 
 database.clearAll()
-  .then(function () {
+  .then(function() {
     return database.createUser({
       name: 'keanyc',
       nickname: 'KeaNy',
@@ -13,7 +13,7 @@ database.clearAll()
       photo: 'https://graph.facebook.com/keanyc/picture?width=120&height=120'
     });
   })
-  .then(function (user) {
+  .then(function(user) {
     return Promise.all([
       database.createPost({
         title: '0到1 121/365',
@@ -35,12 +35,12 @@ database.clearAll()
       })
     ])
   })
-  .then(function () {
+  .then(function() {
     console.log('Data seed completely.');
   })
-  .catch(function (err) {
+  .catch(function(err) {
     console.log(err);
   })
-  .finally(function () {
+  .finally(function() {
     process.exit();
   });
