@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "node server/server.js",
-    "seed": "node server/data/seed.js",
+    "seed": "node server/data/seed/index.js",
     "jscs": "jscs ./",
     "jshint": "jshint ./",
     "lint": "gulp lint",
